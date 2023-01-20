@@ -6,7 +6,7 @@ import picture from '../../assets/perfil.png'
 export function Hero() {
   return (
     <Container data-aos="fade-up">
-      <Image src={picture} alt="Minha foto" />
+      <Image src={picture} alt="Minha foto" height={600} />
       {/* <img
         src="https://raw.githubusercontent.com/GBDev13/youtube-meuprimeiroportfolio/main/src/assets/pessoa.webp"
         alt="Minha foto"

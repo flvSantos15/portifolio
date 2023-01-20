@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
@@ -19,7 +19,7 @@ export const Container = styled.section`
       gap: 2rem;
     }
   }
-`;
+`
 
 export const ItemContainer = styled.div`
   > div {
@@ -27,7 +27,7 @@ export const ItemContainer = styled.div`
     /* padding: 1rem; */
     padding: 1.75rem;
     padding-top: 2.5rem;
-    height: 20rem;
+    /* height: 20rem; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -97,4 +97,4 @@ export const ItemContainer = styled.div`
       }
     }
   }
-`;
+`

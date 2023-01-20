@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { AiOutlineRightCircle } from 'react-icons/ai';
-import { ProjetoContainer } from './styles';
+import Link from 'next/link'
+import { AiOutlineRightCircle } from 'react-icons/ai'
+import { ProjetoContainer } from './styles'
 
 interface ProjectProps {
-  title: string;
-  type: string;
-  slug: string;
-  img: string;
+  title: string
+  type: string
+  slug: string
+  img: string
 }
 
 export function ProjectItem({ title, type, slug, img }: ProjectProps) {
@@ -21,11 +21,9 @@ export function ProjectItem({ title, type, slug, img }: ProjectProps) {
       </section>
       <button type="button">
         <Link href={`/projects/${slug}`}>
-          <a>
-            See more <AiOutlineRightCircle />
-          </a>
+          See more <AiOutlineRightCircle />
         </Link>
       </button>
     </ProjetoContainer>
-  );
+  )
 }
