@@ -15,7 +15,7 @@ export function Experiences() {
         /> */}
         <ExperienciaItem
           year="2020"
-          title="Dev Front-end"
+          title="Dev Front-end and Mobile"
           description="
             Gaining experience through various personal projects, for more details, please check out at my github account.
           "

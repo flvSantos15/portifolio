@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
@@ -7,10 +7,26 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
+
+  /* .img {
+    border: 1px solid blue;
+    height: 600px;
+
+    .imgBox {
+      position: absolute;
+      top: 430px;
+      left: 0px;
+      width: 33rem;
+      height: 15rem;
+      background: ${(props) =>
+    `linear-gradient(180deg, transparent 4.15%, ${props.theme.backgroundLight} 66.8%, ${props.theme.backgroundLight} 93.49%)`};
+    }
+  } */
+
   > img {
     width: 40rem;
-    border-radius: 45%;
-    flex: 1;
+    border-radius: 48%;
+    /* flex: 1; */
   }
   > div {
     flex: 4;
@@ -34,7 +50,7 @@ export const Container = styled.section`
       width: 100%;
     }
   }
-`;
+`
 
 export const TextContainer = styled.section`
   margin-bottom: 2rem;
@@ -64,14 +80,14 @@ export const TextContainer = styled.section`
       font-size: 1.5rem;
     }
   }
-`;
+`
 
 export const InfosContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`;
+`
 
 export const CodeItem = styled.pre`
   background: ${({ theme }) => theme.gradient};
@@ -111,4 +127,4 @@ export const CodeItem = styled.pre`
     margin-bottom: 1rem;
     display: block;
   }
-`;
+`

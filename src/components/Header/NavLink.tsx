@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { NavLinkContainer } from './styles'
+import { NavLinkContainer, MobileNavLinkContainer } from './styles'
 
 interface Props {
   title: string
@@ -21,8 +21,14 @@ export function NavLink({ title, path, includes = false }: Props) {
   const isActive = verifyIfIsActive()
 
   return (
-    <NavLinkContainer isActive={isActive}>
-      <Link href={path}>{title}</Link>
-    </NavLinkContainer>
+    <>
+      <NavLinkContainer isActive={isActive}>
+        <Link href={path}>{title}</Link>
+      </NavLinkContainer>
+
+      <MobileNavLinkContainer>
+        <Link href={path}>{title}</Link>
+      </MobileNavLinkContainer>
+    </>
   )
 }

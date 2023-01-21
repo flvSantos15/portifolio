@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
@@ -7,22 +7,24 @@ export const Container = styled.section`
     width: 100%;
     /* display: flex; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     /* grid-template-rows: 2; */
     align-items: center;
     justify-content: center;
     /* gap: 8rem; */
     gap: 4rem;
     @media (max-width: 1000px) {
-      gap: 5rem;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1fr;
     }
     @media (max-width: 700px) {
-      gap: 3rem;
+      gap: 2rem;
       flex-wrap: wrap;
       margin-top: 5rem;
+      grid-template-columns: 1fr 1fr;
     }
   }
-`;
+`
 
 export const KnowledgeContainer = styled.div`
   display: flex;
@@ -57,4 +59,4 @@ export const KnowledgeContainer = styled.div`
       height: 5rem;
     }
   }
-`;
+`

@@ -2,8 +2,8 @@ import type { AppProps } from 'next/app'
 
 import { ThemeProvider } from 'styled-components'
 import NextNprogress from 'nextjs-progressbar'
-
 import { Toaster } from 'react-hot-toast'
+
 import GlobalStyles from '../styles/global'
 import theme from '../styles/theme'
 

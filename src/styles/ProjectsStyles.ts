@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ProjectsContainer = styled.div`
   display: flex;
@@ -9,6 +9,7 @@ export const ProjectsContainer = styled.div`
     margin-top: 5rem;
     margin-bottom: 5rem;
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
@@ -19,4 +20,4 @@ export const ProjectsContainer = styled.div`
       grid-template-columns: 1fr;
     }
   }
-`;
+`

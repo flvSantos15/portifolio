@@ -1,22 +1,22 @@
-import { GetStaticProps } from 'next';
-import Head from 'next/head';
+import { GetStaticProps } from 'next'
+import Head from 'next/head'
 
-import { Header } from '../../components/Header';
-import { ProjectItem } from '../../components/ProjectItem';
+import { Header } from '../../components/Header'
+import { ProjectItem } from '../../components/ProjectItem'
 
-import { ProjectsContainer } from '../../styles/ProjectsStyles';
+import { ProjectsContainer } from '../../styles/ProjectsStyles'
 
 interface IProject {
-  slug: string;
-  title: string;
-  type: string;
-  description: string;
-  link: string;
-  thumbnail: string;
+  slug: string
+  title: string
+  type: string
+  description: string
+  link: string
+  thumbnail: string
 }
 
 interface ProjectProps {
-  projects: IProject[];
+  projects: IProject[]
 }
 
 export default function Projects({ projects }: ProjectProps) {
@@ -39,8 +39,9 @@ export default function Projects({ projects }: ProjectProps) {
       </Head>
 
       <Header />
+
       <main className="container">
-        {projects.map(project => (
+        {projects.map((project) => (
           <ProjectItem
             key={project.slug}
             title={project.title}
@@ -52,7 +53,7 @@ export default function Projects({ projects }: ProjectProps) {
         ))}
       </main>
     </ProjectsContainer>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -66,16 +67,16 @@ export const getStaticProps: GetStaticProps = async () => {
       thumbnail:
         'https://github.com/flvSantos15/ignite-timer-flv/raw/main/ignite-timer.png'
     },
-    // {
-    //   slug: 'ignite-news',
-    //   title: 'IgniteNews',
-    //   type: 'project',
-    //   description:
-    //     'It is a NewsLetter application, where the user sees a preview of an article if he does not have subscription, which he can do with his github, and assign for a payment per month. After he is able to see and read all articles coming from a database.',
-    //   link: 'https://ignews-flvsantos-54v09lqxc-flvsantos15.vercel.app/',
-    //   thumbnail:
-    //     'https://github.com/flvSantos15/aula03-ignews/raw/main/capa.png'
-    // },
+    {
+      slug: 'ignite-news',
+      title: 'IgniteNews',
+      type: 'project',
+      description:
+        'It is a NewsLetter application, where the user sees a preview of an article if he does not have subscription, which he can do with his github, and assign for a payment per month. After he is able to see and read all articles coming from a database.',
+      link: 'https://ignews-flvsantos-54v09lqxc-flvsantos15.vercel.app/',
+      thumbnail:
+        'https://github.com/flvSantos15/aula03-ignews/raw/main/capa.png'
+    },
     {
       slug: 'move-it',
       title: 'Move It',
@@ -104,13 +105,23 @@ export const getStaticProps: GetStaticProps = async () => {
       link: 'http://sleep-cycle-calculator-sigma.vercel.app/',
       thumbnail:
         'https://github.com/flvSantos15/cycle_sleep_calculator/raw/main/sleep-cycle.png'
+    },
+    {
+      slug: 'todo-list',
+      title: 'todo-list',
+      type: 'project',
+      description:
+        'todo-list is an web application where the user can create a to-do list, the functionalities are to create, delete a to-do and mark or unmark it as completed.',
+      link: 'https://cllg1-todo-list22.vercel.app/',
+      thumbnail:
+        'https://github.com/flvSantos15/cllg1TodoList22/raw/main/toDoList.png'
     }
-  ];
+  ]
 
   return {
     props: {
       projects
     },
     revalidate: 86400
-  };
-};
+  }
+}

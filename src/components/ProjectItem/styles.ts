@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface ContainerProps {
-  imgUrl: string;
+  imgUrl: string
 }
 
 export const Container = styled.div<ContainerProps>`
   > a {
     position: relative;
     width: 100%;
-    background: url(${props => props.imgUrl}) no-repeat center;
+    background: url(${(props) => props.imgUrl}) no-repeat center;
     background-size: cover;
     height: 10rem;
     padding: 1.5rem;
@@ -20,12 +20,24 @@ export const Container = styled.div<ContainerProps>`
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      height: 15rem;
+    }
+
     &:hover {
       border-color: ${({ theme }) => theme.primary};
       > div.overlay {
         opacity: 0.5;
       }
+      > section > h1 {
+        display: none;
+      }
+      > section > h2 {
+        display: none;
+      }
     }
+
     > section {
       z-index: 2;
       h1 {
@@ -49,4 +61,4 @@ export const Container = styled.div<ContainerProps>`
       transition: 0.5s;
     }
   }
-`;
+`

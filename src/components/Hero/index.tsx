@@ -7,10 +7,7 @@ export function Hero() {
   return (
     <Container data-aos="fade-up">
       <Image src={picture} alt="Minha foto" height={600} />
-      {/* <img
-        src="https://raw.githubusercontent.com/GBDev13/youtube-meuprimeiroportfolio/main/src/assets/pessoa.webp"
-        alt="Minha foto"
-      /> */}
+
       <div>
         <TextContainer>
           <h1>Hi There!</h1>

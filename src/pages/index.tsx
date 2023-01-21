@@ -59,8 +59,8 @@ export default function Home({ projects }: HomeProps) {
         <Experiences />
         <Projects projects={projects} />
         <Knowledges />
-        {/* <ContactForm /> */}
       </main>
+      {/* <ContactForm /> */}
 
       <Footer />
     </HomeContainer>
