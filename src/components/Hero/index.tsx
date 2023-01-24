@@ -6,7 +6,9 @@ import picture from '../../assets/perfil.png'
 export function Hero() {
   return (
     <Container data-aos="fade-up">
-      <Image src={picture} alt="Minha foto" height={600} />
+      <div className="logo">
+        <Image src={picture} alt="Minha foto" />
+      </div>
 
       <div>
         <TextContainer>

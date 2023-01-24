@@ -8,6 +8,14 @@ export const Container = styled.section`
   justify-content: center;
   margin-top: 5rem;
 
+  .logo {
+    /* background: ${({ theme }) => theme.gradient}; */
+    background: ${(props) =>
+      `linear-gradient(180deg, ${props.theme.backgroundLight} 4.15%, ${props.theme.backgroundLight} 66.8%, ${props.theme.backgroundLight} 93.49%)`};
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
   /* .img {
     border: 1px solid blue;
     height: 600px;
@@ -23,29 +31,43 @@ export const Container = styled.section`
     }
   } */
 
-  > img {
-    width: 40rem;
-    border-radius: 48%;
-    /* flex: 1; */
+  > .logo > img {
+    /* width: 40rem; */
+    height: 42rem;
+    border-radius: 8px;
   }
   > div {
     flex: 4;
   }
   @media (max-width: 1450px) {
-    > img {
-      width: 30rem;
+    > .logo > img {
+      width: 100%;
+      height: 40rem;
     }
     > div {
       flex: 1;
     }
   }
   @media (max-width: 1000px) {
-    > img {
-      width: 22rem;
+    > .logo > img {
+      width: 100%;
+      height: 30rem;
     }
   }
   @media (max-width: 700px) {
     flex-direction: column-reverse;
+    .logo {
+      /* background: ${({ theme }) => theme.gradient}; */
+      background: ${(props) =>
+        `linear-gradient(180deg, ${props.theme.backgroundLight} 4.15%, ${props.theme.backgroundLight} 66.8%, ${props.theme.backgroundLight} 93.49%)`};
+      /* max-height: 26rem; */
+      width: 100%;
+    }
+    > .logo > img {
+      width: 100%;
+      max-height: 26rem;
+      object-fit: cover;
+    }
     > div {
       width: 100%;
     }
