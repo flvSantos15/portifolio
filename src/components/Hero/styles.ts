@@ -9,9 +9,9 @@ export const Container = styled.section`
   margin-top: 5rem;
 
   .logo {
-    /* background: ${({ theme }) => theme.gradient}; */
-    background: ${(props) =>
-      `linear-gradient(180deg, ${props.theme.backgroundLight} 4.15%, ${props.theme.backgroundLight} 66.8%, ${props.theme.backgroundLight} 93.49%)`};
+    background: ${({ theme }) => theme.gradient};
+    /* background: ${(props) =>
+      `linear-gradient(180deg, ${props.theme.backgroundLight} 4.15%, ${props.theme.backgroundLight} 66.8%, ${props.theme.backgroundLight} 93.49%)`}; */
     border-radius: 8px;
     overflow: hidden;
   }
@@ -79,12 +79,14 @@ export const TextContainer = styled.section`
   width: 100%;
   h1 {
     font-size: 8rem;
-    color: ${({ theme }) => theme.primary};
+    /* color: ${({ theme }) => theme.primary}; */
+    color: ${({ theme }) => theme.inputBackground};
   }
   h2 {
     font-size: 3rem;
     font-weight: 400;
-    color: ${({ theme }) => theme.secondary};
+    /* color: ${({ theme }) => theme.secondary}; */
+    color: ${({ theme }) => theme.inputBackgroundLight};
   }
   @media (max-width: 1450px) {
     h1 {

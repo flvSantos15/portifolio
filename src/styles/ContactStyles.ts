@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const ContactContainer = styled.div`
   width: 100%;
   /* height: 100%; */
   height: 100vh;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 
   > main {
     display: flex;
@@ -16,4 +16,4 @@ export const ContactContainer = styled.div`
     height: 100%;
     /* gap: 8rem; */
   }
-`;
+`

@@ -41,6 +41,7 @@ export const Container = styled.header`
 
   button {
     background-color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.white};
     border: 0;
     border-radius: 8px;
     padding-top: 0.75rem;
@@ -62,6 +63,8 @@ export const MobileContainer = styled.header`
   /* justify-content: center; */
   justify-content: space-between;
   height: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
   border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
@@ -108,7 +111,8 @@ export const Content = styled(Menubar.Content)`
 `
 
 export const BaseItem = styled(Menubar.Item)`
-  background-color: ${(props) => props.theme.inputBackground};
+  /* background-color: ${(props) => props.theme.inputBackground}; */
+  background-color: ${(props) => props.theme.backgroundLight};
   color: ${(props) => props.theme.primary};
   font-size: 1.125rem;
   font-weight: medium;
@@ -130,7 +134,7 @@ export const BaseItem = styled(Menubar.Item)`
     color: ${(props) => props.theme.inputBackground};
 
     > a {
-      color: ${(props) => props.theme.inputBackground};
+      color: ${(props) => props.theme.white};
     }
   }
 `
@@ -146,7 +150,8 @@ export const ItemBottom = styled(BaseItem)`
   padding: 0px;
 
   button {
-    background-color: ${(props) => props.theme.inputBackground};
+    background-color: ${(props) => props.theme.backgroundLight};
+    /* background-color: ${(props) => props.theme.inputBackground}; */
     color: ${(props) => props.theme.primary};
     font-size: 1.125rem;
     text-transform: uppercase;
@@ -162,7 +167,7 @@ export const ItemBottom = styled(BaseItem)`
 
     &:hover {
       background-color: ${(props) => props.theme.primary};
-      color: ${(props) => props.theme.inputBackground};
+      color: ${(props) => props.theme.white};
     }
   }
 `

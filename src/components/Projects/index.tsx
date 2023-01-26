@@ -5,16 +5,20 @@ import { ProjectItem } from './ProjectItem'
 import { Container } from './styles'
 
 interface IProject {
-  slug: string
-  title: string
-  type: string
+  id: string
   description: string
-  link: string
-  thumbnail: string
+  name: string
+  slug?: string | null | undefined
+  type?: string
+  tags: string[]
+  link?: string
+  image: {
+    url: string
+  }[]
 }
 
 interface ProjectsProps {
-  projects: IProject[]
+  projects: IProject[] | undefined
 }
 
 export function Projects({ projects }: ProjectsProps) {
@@ -23,13 +27,13 @@ export function Projects({ projects }: ProjectsProps) {
       <SectionTitle title="Last Projects" />
 
       <section>
-        {projects.slice(0, 3).map((project) => (
+        {projects?.slice(0, 3).map((project) => (
           <ProjectItem
             key={project.slug}
-            img={project.thumbnail}
-            title={project.title}
-            type={project.type}
-            slug={project.slug}
+            img={project.image?.[0]?.url as string}
+            title={project.name}
+            // type={project.type}
+            slug={project?.slug as string}
           />
         ))}
       </section>

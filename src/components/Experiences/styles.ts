@@ -24,6 +24,7 @@ export const Container = styled.section`
 export const ItemContainer = styled.div`
   > div {
     background: ${({ theme }) => theme.gradient};
+    /* background: ${({ theme }) => theme.inputBackground}; */
     /* padding: 1rem; */
     padding: 1.75rem;
     padding-top: 2.5rem;
@@ -35,13 +36,16 @@ export const ItemContainer = styled.div`
     /* max-width: 19rem; */
     max-width: 20rem;
     transition: 0.5s;
+    border-radius: 8px;
     h1 {
-      color: ${({ theme }) => theme.primary};
+      /* color: ${({ theme }) => theme.primary}; */
+      color: ${({ theme }) => theme.inputBackground};
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      /* color: ${({ theme }) => theme.secondary}; */
+      color: ${({ theme }) => theme.inputBackgroundLight};
       font-size: 1.5rem;
       font-weight: 300;
       margin-bottom: 1rem;

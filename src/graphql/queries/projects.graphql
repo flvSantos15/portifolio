@@ -1,0 +1,13 @@
+query Projects {
+  projects {
+    id
+    description
+    name
+    slug
+    tags
+    image {
+      url
+    }
+    sourceCode
+  }
+}

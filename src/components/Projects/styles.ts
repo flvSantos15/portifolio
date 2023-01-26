@@ -1,8 +1,8 @@
-import { darken } from 'polished';
-import styled from 'styled-components';
+import { darken } from 'polished'
+import styled from 'styled-components'
 
 interface ProjetoProps {
-  imgUrl: string;
+  imgUrl: string
 }
 
 export const Container = styled.section`
@@ -42,9 +42,9 @@ export const Container = styled.section`
       }
     }
   }
-`;
+`
 
-export const ProjetoContainer = styled.div<ProjetoProps>`
+export const ProjectContainer = styled.div<ProjetoProps>`
   width: 100%;
   display: flex;
   height: 25rem;
@@ -81,9 +81,10 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
   > section {
     width: 50rem;
     height: 100%;
-    background: url(${props => props.imgUrl}) no-repeat center;
+    background: url(${(props) => props.imgUrl}) no-repeat center;
     background-size: cover;
     position: relative;
+    border-radius: 8px;
     > div.overlay {
       position: absolute;
       width: 100%;
@@ -189,4 +190,4 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       }
     }
   }
-`;
+`
