@@ -1,20 +1,31 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import Image from 'next/image'
-import { Container, TextContainer, InfosContainer, CodeItem } from './styles'
-import picture from '../../assets/perfil.png'
+import { CodeItem, Container, InfosContainer, TextContainer } from "./styles";
 
 export function Hero() {
+  const info = {
+    name: "Flavio",
+    lastname: "Santos",
+    role: "Mid Front-end Developer",
+    address: {
+      city: "São Luís",
+      state: "MA",
+      country: "Brazil",
+    },
+  };
+
   return (
     <Container data-aos="fade-up">
-      <div className="logo">
+      {/* <div className="logo">
         <Image src={picture} alt="Minha foto" />
-      </div>
+      </div> */}
 
       <div>
         <TextContainer>
           <h1>Hi There!</h1>
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <h2>My name's Flavio</h2>
+          <h2>
+            My name&apos;s {info.name} {info.lastname}
+          </h2>
         </TextContainer>
         <InfosContainer>
           {/* <CodeItem data-aos="zoom-in">
@@ -29,17 +40,20 @@ export function Hero() {
             {'\u007D'}
           </CodeItem> */}
           <CodeItem data-aos="zoom-in">
-            <span className="purple">About</span> {'\u007B'}
+            <span className="purple">About</span> {"\u007B"}
             <div>
-              Role: <span className="blue">Dev Front-end,</span>
+              Role: <span className="blue">{info.role},</span>
             </div>
             <div>
-              City: <span className="blue">São Luís</span>
+              City:{" "}
+              <span className="blue">
+                {info.address.city} - {info.address.state}
+              </span>
             </div>
-            {'\u007D'}
+            {"\u007D"}
           </CodeItem>
         </InfosContainer>
       </div>
     </Container>
-  )
+  );
 }

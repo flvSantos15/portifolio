@@ -1,45 +1,41 @@
-import { GetServerSideProps, GetStaticProps } from 'next'
-import Head from 'next/head'
-import { useEffect } from 'react'
+import { GetServerSideProps } from "next";
+import Head from "next/head";
+import { useEffect } from "react";
 
-import Aos from 'aos'
-import { client, ssrCache } from '../lib/urql'
-import { useProjectsQuery, ProjectsDocument } from '../generated/graphql'
+import Aos from "aos";
+import { ProjectsDocument, useProjectsQuery } from "../generated/graphql";
+import { client, ssrCache } from "../lib/urql";
 
-import { HomeContainer } from '../styles/HomeStyles'
+import { HomeContainer } from "../styles/HomeStyles";
 
-import { Header } from '../components/Header'
-import { Hero } from '../components/Hero'
-import { Experiences } from '../components/Experiences'
-import { Projects } from '../components/Projects'
-import { Knowledges } from '../components/Knowledges'
+import { ExperiencesList } from "../components/Experiences";
+import { Hero } from "../components/Hero";
+import { Knowledges } from "../components/Knowledges";
+import { Projects } from "../components/Projects";
 // import { ContactForm } from '../components/ContactForm';
-import { Footer } from '../components/Footer'
+import { Footer } from "../components/Footer";
 
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 
 interface IProjeto {
-  id: string
-  description: string
-  name: string
-  slug: string
-  type?: string
-  tags: string[]
-  link?: string
+  id: string;
+  description: string;
+  name: string;
+  slug: string;
+  type?: string;
+  tags: string[];
+  link?: string;
   image: {
-    url: string
-  }
+    url: string;
+  };
 }
 
 export default function Home() {
-  const [{ data }] = useProjectsQuery()
-
-  // deu certo
-  // console.log(data)
+  const [{ data }] = useProjectsQuery();
 
   useEffect(() => {
-    Aos.init({ duration: 1500 })
-  }, [])
+    Aos.init({ duration: 1500 });
+  }, []);
 
   return (
     <HomeContainer>
@@ -59,11 +55,11 @@ export default function Home() {
         />
       </Head>
 
-      <Header />
+      {/* <Header /> */}
 
       <main className="container">
         <Hero />
-        <Experiences />
+        <ExperiencesList />
         <Projects projects={data?.projects} />
         <Knowledges />
       </main>
@@ -71,15 +67,15 @@ export default function Home() {
 
       <Footer />
     </HomeContainer>
-  )
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  await client.query(ProjectsDocument, {}).toPromise()
+  await client.query(ProjectsDocument, {}).toPromise();
 
   return {
     props: {
-      urqlState: ssrCache.extractData()
-    }
-  }
-}
+      urqlState: ssrCache.extractData(),
+    },
+  };
+};

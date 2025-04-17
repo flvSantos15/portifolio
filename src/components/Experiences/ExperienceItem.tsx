@@ -1,22 +1,20 @@
-import { ItemContainer } from './styles';
+import { ItemContainer } from "./styles";
 
 interface ExperienciaProps {
-  year: string;
-  title: string;
-  description: string;
+  data: {
+    year: string;
+    title: string;
+    description: string;
+  };
 }
 
-export function ExperienciaItem({
-  year,
-  title,
-  description
-}: ExperienciaProps) {
+export function ExperienciaItem({ data }: ExperienciaProps) {
   return (
     <ItemContainer data-aos="fade-up">
       <div>
-        <h1>{year}</h1>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h1>{data.year}</h1>
+        <h2>{data.title}</h2>
+        <p>{data.description}</p>
       </div>
     </ItemContainer>
   );

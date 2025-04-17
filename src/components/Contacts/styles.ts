@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100%;
@@ -39,9 +39,9 @@ export const Container = styled.div`
       flex-direction: column;
     }
   }
-`
+`;
 
-export const ContactItem = styled.button`
+export const ContactItemContainer = styled.button`
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-right: 2.5rem;
@@ -81,4 +81,4 @@ export const ContactItem = styled.button`
       word-break: break-all;
     }
   }
-`
+`;

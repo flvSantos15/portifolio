@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
@@ -19,7 +19,15 @@ export const Container = styled.section`
       gap: 2rem;
     }
   }
-`
+`;
+/* Session container in display grid with 3 colums */
+
+export const SessionContainer = styled.div`
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+`;
 
 export const ItemContainer = styled.div`
   > div {
@@ -101,4 +109,4 @@ export const ItemContainer = styled.div`
       }
     }
   }
-`
+`;

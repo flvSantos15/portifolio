@@ -1,20 +1,16 @@
 import {
+  AiFillLinkedin,
   // AiOutlineTwitter,
   AiOutlineGithub,
-  AiFillLinkedin
-} from 'react-icons/ai';
+} from "react-icons/ai";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 export function Footer() {
-  function handleRedirect(url: string) {
-    window.open(url, '_blank');
-  }
-
   const handleScrollTop = () => {
     window.scroll({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -28,14 +24,40 @@ export function Footer() {
           {/* <AiOutlineTwitter
             onClick={() => handleRedirect('https://twitter.com')}
           /> */}
-          <AiOutlineGithub
-            onClick={() => handleRedirect('https://github.com/flvSantos15')}
-          />
-          <AiFillLinkedin
-            onClick={() =>
-              handleRedirect('https://www.linkedin.com/in/flvsantos15/')
-            }
-          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              color: "#fff",
+            }}
+          >
+            <AiOutlineGithub style={{ width: "1.5rem", height: "1.5rem" }} />
+            <span>Github:</span>
+            <a href="https://github.com/flvSantos15" style={{ color: "#fff" }}>
+              {" "}
+              flvSantos15
+            </a>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              color: "#fff",
+            }}
+          >
+            <AiFillLinkedin style={{ width: "1.5rem", height: "1.5rem" }} />
+            <span>LinkedIn:</span>
+            <a
+              href="https://www.linkedin.com/in/flvsantos15/"
+              style={{ color: "#fff" }}
+            >
+              {" "}
+              flvSantos15
+            </a>
+          </div>
         </section>
       </div>
     </Container>

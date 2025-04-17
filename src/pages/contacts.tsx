@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import { useEffect } from 'react';
+import Head from "next/head";
+import { useEffect } from "react";
 
-import Aos from 'aos';
+import Aos from "aos";
 
-import { ContactContainer } from '../styles/ContactStyles';
+import { ContactContainer } from "../styles/ContactStyles";
 
-import { Header } from '../components/Header';
+import { Header } from "../components/Header";
 // import { Footer } from '../components/Footer';
-import { Contact } from '../components/Contacts';
+import { ContactList } from "../components/Contacts";
 
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 export default function Contacts() {
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Contacts() {
       <Header />
 
       <main className="container">
-        <Contact />
+        <ContactList />
       </main>
 
       {/* <Footer /> */}

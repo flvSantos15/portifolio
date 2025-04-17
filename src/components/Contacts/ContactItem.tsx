@@ -1,23 +1,25 @@
-import { ReactNode } from 'react';
-import { ContactItem as Contact } from './styles';
+import { ReactNode } from "react";
+import { ContactItemContainer } from "./styles";
 
 interface ContactItemProps {
-  icon: ReactNode;
-  title: string;
-  link?: string;
+  data: {
+    icon: ReactNode;
+    title: string;
+    link?: string;
+  };
 }
 
-export function ContactItem({ icon, title, link }: ContactItemProps) {
+export function Contact({ data }: ContactItemProps) {
   const redirectTo = () => {
-    if (link) {
-      window.open(link, '_blank');
+    if (data.link) {
+      window.open(data.link, "_blank");
     }
   };
 
   return (
-    <Contact onClick={redirectTo}>
-      {icon}
-      <h2>{title}</h2>
-    </Contact>
+    <ContactItemContainer onClick={redirectTo}>
+      {data.icon}
+      <h2>{data.title}</h2>
+    </ContactItemContainer>
   );
 }
