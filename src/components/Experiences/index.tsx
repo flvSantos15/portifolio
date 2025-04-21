@@ -16,7 +16,7 @@ export function ExperiencesList() {
 
       <h2 className="text-4xl font-bold text-white mb-4">Experiences</h2>
 
-      <div className="grid grid-cols-3 gap-4 w-full border border-solid border-[red]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
         {experiences.map((experience) => (
           <ExperienciaItem key={experience.id} data={experience} />
         ))}

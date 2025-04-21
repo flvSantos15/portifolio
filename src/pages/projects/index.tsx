@@ -4,10 +4,7 @@ import Head from "next/head";
 import { ProjectsDocument, useProjectsQuery } from "../../generated/graphql";
 import { client, ssrCache } from "../../lib/urql";
 
-import { Header } from "../../components/Header";
 import { ProjectItem } from "../../components/ProjectItem";
-
-import { ProjectsContainer } from "../../styles/ProjectsStyles";
 
 interface IProject {
   slug: string;
@@ -26,7 +23,7 @@ export default function Projects({ projects }: ProjectProps) {
   const [{ data }] = useProjectsQuery();
 
   return (
-    <ProjectsContainer>
+    <div className="flex flex-col items-center w-full h-screen bg-gray-800 pb-16 px-10">
       <Head>
         <title>Projetos | Flavio Santos</title>
         <meta
@@ -43,9 +40,7 @@ export default function Projects({ projects }: ProjectProps) {
         />
       </Head>
 
-      <Header />
-
-      <main className="container">
+      <main className="grid grid-cols-1 lg:grid-cols-3 w-full my-8 gap-2">
         {data?.projects.map((project) => {
           return (
             <ProjectItem
@@ -59,7 +54,7 @@ export default function Projects({ projects }: ProjectProps) {
           );
         })}
       </main>
-    </ProjectsContainer>
+    </div>
   );
 }
 

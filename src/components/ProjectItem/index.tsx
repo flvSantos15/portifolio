@@ -1,26 +1,23 @@
 /* eslint-disable react/no-unused-prop-types */
-import Link from 'next/link'
-import { Container } from './styles'
+import Link from "next/link";
+// import { Container } from './styles'
 
 interface ProjectItemProps {
-  title: string
-  imgUrl: string
-  slug?: string
-  link: string
+  title: string;
+  imgUrl: string;
+  slug?: string;
+  link: string;
 }
 
 export function ProjectItem({ title, imgUrl, link }: ProjectItemProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    // <Container imgUrl={imgUrl}>
+    <div className="flex flex-col gap-1 border border-solid border-[yellow]">
       {/* <Link href={`/projetos/${slug}`}> */}
       <Link href={`${link}`}>
-        <>
-          <div className="overlay" />
-          <section>
-            <h1>{title}</h1>
-          </section>
-        </>
+        <h1 className="text-2xl text-white">{title}</h1>
       </Link>
-    </Container>
-  )
+      <span className="text-white">description</span>
+    </div>
+  );
 }

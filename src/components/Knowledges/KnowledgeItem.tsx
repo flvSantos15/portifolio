@@ -7,10 +7,7 @@ interface KnowledgeProps {
 
 export function KnowledgeItem({ title, icon }: KnowledgeProps) {
   return (
-    <div
-      data-aos="fade-up"
-      className="flex flex-col items-center justify-center gap-3 w-full"
-    >
+    <div className="flex flex-col items-center justify-center gap-3 w-full bg-background p-4 rounded-lg">
       {/* <p>{title}</p> */}
       {icon}
     </div>

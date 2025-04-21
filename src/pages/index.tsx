@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full h-full bg-gray-800">
+    <div className="flex flex-col items-center w-full h-full bg-gray-800 pb-16">
       <Head>
         <title>Flávio Santos</title>
         <meta

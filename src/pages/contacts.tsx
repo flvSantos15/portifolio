@@ -3,9 +3,6 @@ import { useEffect } from "react";
 
 import Aos from "aos";
 
-import { ContactContainer } from "../styles/ContactStyles";
-
-import { Header } from "../components/Header";
 // import { Footer } from '../components/Footer';
 import { ContactList } from "../components/Contacts";
 
@@ -17,7 +14,7 @@ export default function Contacts() {
   }, []);
 
   return (
-    <ContactContainer>
+    <div className="flex flex-col items-center w-full h-full bg-gray-800 pb-16">
       <Head>
         <title>Contacts</title>
         <meta
@@ -34,13 +31,9 @@ export default function Contacts() {
         />
       </Head>
 
-      <Header />
-
       <main className="container">
         <ContactList />
       </main>
-
-      {/* <Footer /> */}
-    </ContactContainer>
+    </div>
   );
 }

@@ -30,47 +30,6 @@ export const SessionContainer = styled.div`
 `;
 
 export const ItemContainer = styled.div`
-  > div {
-    background: ${({ theme }) => theme.gradient};
-    /* background: ${({ theme }) => theme.inputBackground}; */
-    /* padding: 1rem; */
-    padding: 1.75rem;
-    padding-top: 2.5rem;
-    /* height: 20rem; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    /* max-width: 19rem; */
-    max-width: 20rem;
-    transition: 0.5s;
-    border-radius: 8px;
-    h1 {
-      /* color: ${({ theme }) => theme.primary}; */
-      color: ${({ theme }) => theme.inputBackground};
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    h2 {
-      /* color: ${({ theme }) => theme.secondary}; */
-      color: ${({ theme }) => theme.inputBackgroundLight};
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
-    p {
-      color: ${({ theme }) => theme.textLight};
-      font-size: 1rem;
-      font-weight: 300;
-    }
-  }
-  &:hover > div {
-    filter: brightness(1.3);
-    transform: translateY(-20px);
-  }
-  &:nth-child(even) > div {
-    margin-top: 4rem;
-  }
   @media (max-width: 1000px) {
     > div {
       height: 15rem;
