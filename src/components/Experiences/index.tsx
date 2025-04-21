@@ -1,18 +1,26 @@
 import { experiences } from "../../shared/constants/experiences";
-import { SectionTitle } from "../SectionTitle";
 import { ExperienciaItem } from "./ExperienceItem";
-import { Container, SessionContainer } from "./styles";
 
 export function ExperiencesList() {
   return (
-    <Container>
-      <SectionTitle title="3 Years" description="of experience" />
+    <div className="flex flex-col w-full">
+      <h2 className="text-4xl font-bold text-white mb-4">About</h2>
 
-      <SessionContainer>
+      <p className="text-xl text-white">
+        I&apos;m a passionate Fullstack Developer with over 3 years of
+        experience, specializing in building efficient, scalable, and
+        user-friendly applications — both web and mobile.
+      </p>
+
+      <div className="h-[1px] w-full my-14 bg-gray-600" />
+
+      <h2 className="text-4xl font-bold text-white mb-4">Experiences</h2>
+
+      <div className="grid grid-cols-3 gap-4 w-full border border-solid border-[red]">
         {experiences.map((experience) => (
           <ExperienciaItem key={experience.id} data={experience} />
         ))}
-      </SessionContainer>
-    </Container>
+      </div>
+    </div>
   );
 }

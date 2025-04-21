@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import { KnowledgeContainer } from './styles';
+import { ReactNode } from "react";
 
 interface KnowledgeProps {
   title: string;
@@ -8,9 +7,12 @@ interface KnowledgeProps {
 
 export function KnowledgeItem({ title, icon }: KnowledgeProps) {
   return (
-    <KnowledgeContainer data-aos="fade-up">
-      <p>{title}</p>
+    <div
+      data-aos="fade-up"
+      className="flex flex-col items-center justify-center gap-3 w-full"
+    >
+      {/* <p>{title}</p> */}
       {icon}
-    </KnowledgeContainer>
+    </div>
   );
 }

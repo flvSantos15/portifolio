@@ -1,14 +1,15 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
-import { Provider } from 'urql'
-import { client } from '../lib/urql'
+import { Provider } from "urql";
+import { client } from "../lib/urql";
 
-import { ThemeProvider } from 'styled-components'
-import NextNprogress from 'nextjs-progressbar'
-import { Toaster } from 'react-hot-toast'
+import NextNprogress from "nextjs-progressbar";
+import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "styled-components";
 
-import GlobalStyles from '../styles/global'
-import { theme } from '../styles/theme'
+import GlobalStyles from "../styles/global";
+import "../styles/globals.css";
+import { theme } from "../styles/theme";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -27,7 +28,7 @@ function App({ Component, pageProps }: AppProps) {
         <GlobalStyles />
       </Provider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
