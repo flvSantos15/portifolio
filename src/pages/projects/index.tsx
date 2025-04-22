@@ -23,7 +23,7 @@ export default function Projects({ projects }: ProjectProps) {
   const [{ data }] = useProjectsQuery();
 
   return (
-    <div className="flex flex-col items-center w-full h-screen bg-gray-800 pb-16 px-10">
+    <div className="flex flex-col items-center w-full h-full bg-gray-800 pb-16 px-10">
       <Head>
         <title>Projetos | Flavio Santos</title>
         <meta
@@ -48,8 +48,9 @@ export default function Projects({ projects }: ProjectProps) {
               title={project.name}
               slug={project.slug as string}
               imgUrl={project.image[0].url}
-              link="https://github.com/flvSantos15"
-              // link={project?.sourceCode as string}
+              description={project.description}
+              // link="https://github.com/flvSantos15"
+              link={project?.sourceCode as string}
             />
           );
         })}

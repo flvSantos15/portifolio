@@ -1,23 +1,41 @@
-/* eslint-disable react/no-unused-prop-types */
+import Image from "next/image";
 import Link from "next/link";
-// import { Container } from './styles'
 
 interface ProjectItemProps {
   title: string;
+  description?: string;
   imgUrl: string;
   slug?: string;
   link: string;
 }
 
-export function ProjectItem({ title, imgUrl, link }: ProjectItemProps) {
+export function ProjectItem({
+  title,
+  imgUrl,
+  slug,
+  link,
+  description,
+}: ProjectItemProps) {
   return (
-    // <Container imgUrl={imgUrl}>
-    <div className="flex flex-col gap-1 border border-solid border-[yellow]">
-      {/* <Link href={`/projetos/${slug}`}> */}
-      <Link href={`${link}`}>
-        <h1 className="text-2xl text-white">{title}</h1>
+    <div className="w-[420px] mx-auto bg-background rounded-lg shadow-md p-4">
+      <h2 className="text-2xl font-bold mb-2 text-white">{title}</h2>
+
+      <Link href={link} className="text-xl font-bold mb-2 text-textLight">
+        Repo: {slug}
       </Link>
-      <span className="text-white">description</span>
+
+      <p className="text-textLight">{description}</p>
+
+      {imgUrl && (
+        <Image
+          src={imgUrl}
+          alt={title}
+          width={400}
+          height={400}
+          loading="lazy"
+          className="w-full h-48 object-cover mt-4"
+        />
+      )}
     </div>
   );
 }
