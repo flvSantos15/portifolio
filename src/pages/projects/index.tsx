@@ -47,7 +47,7 @@ export default function Projects({ projects }: ProjectProps) {
               key={project.id}
               title={project.name}
               slug={project.slug as string}
-              imgUrl={project.image[0].url}
+              imgUrl={project?.image[0]?.url}
               description={project.description}
               // link="https://github.com/flvSantos15"
               link={project?.sourceCode as string}
