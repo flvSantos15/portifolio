@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { SectionTitle } from "../SectionTitle";
 import { ProjectItem } from "./ProjectItem";
 
 interface IProject {
@@ -20,14 +19,14 @@ interface ProjectsProps {
   projects: IProject[] | undefined;
 }
 
-// transition: 0.5s;
+// TODO: Adicionar mais projetos e as areas do projeto (Financeiro, Saude, etc).
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <div className="flex flex-col items-center gap-10 w-full mt-2">
-      <SectionTitle title="Last Projects" />
+    <div className="flex flex-col items-center justify-center gap-10 w-full">
+      <h2 className="text-4xl font-bold text-white mb-4 text-left w-full">Projects</h2>
 
-      <div className="flex flex-col gap-8 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
         {projects?.slice(0, 3).map((project) => (
           <ProjectItem
             key={project.slug}
@@ -43,7 +42,7 @@ export function Projects({ projects }: ProjectsProps) {
         type="button"
         className="text-primary py-4 px-3 rounded-lg border-none"
       >
-        <Link href="/projects">See all projects</Link>
+        <Link href="/projects" className="underline underline-offset-4">See all projects</Link>
       </button>
     </div>
   );

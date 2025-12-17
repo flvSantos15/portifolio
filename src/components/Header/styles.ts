@@ -1,4 +1,3 @@
-import { lighten } from 'polished'
 import styled from 'styled-components'
 
 import * as Menubar from '@radix-ui/react-menubar'
@@ -16,7 +15,7 @@ export const Container = styled.header`
   height: 4rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
-  border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
+  border-bottom: 1px solid #00FF00;
 
   @media (max-width: 600px) {
     display: none;
@@ -30,7 +29,7 @@ export const Container = styled.header`
   h1 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: ${(props) => props.theme.primary};
+    color: {(props) => props.theme.primary};
   }
 
   ul {
@@ -40,8 +39,8 @@ export const Container = styled.header`
   }
 
   button {
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.white};
+    background-color: {(props) => props.theme.primary};
+    color: {(props) => props.theme.white};
     border: 0;
     border-radius: 8px;
     padding-top: 0.75rem;
@@ -67,7 +66,7 @@ export const MobileContainer = styled.header`
   padding-bottom: 1rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
-  border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
+  border-bottom: 1px solid #00FF00;
 
   @media (max-width: 600px) {
     display: flex;
@@ -76,27 +75,27 @@ export const MobileContainer = styled.header`
   h1 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: ${(props) => props.theme.primary};
+    color: {(props) => props.theme.primary};
   }
 `
 
 export const Trigger = styled(Menubar.Trigger)`
   padding: 0.7rem;
-  background-color: ${(props) => props.theme.primary};
+  background-color: {(props) => props.theme.primary};
   border-radius: 8px;
   outline-offset: 3px;
-  outline: 1px solid ${(props) => props.theme.primary};
+  outline: 1px solid {(props) => props.theme.primary};
   border: none;
 
   > svg {
-    color: ${(props) => props.theme.backgroundLight};
+    color: {(props) => props.theme.backgroundLight};
     font-size: 1.25rem;
   }
   /* box-shadow: 0px 2px 10px #77c5ae4c; */
 `
 
 export const Content = styled(Menubar.Content)`
-  background-color: ${(props) => props.theme.backgroundLight};
+  background-color: #00FF00;
   padding: 0px;
   border-radius: 8px;
   box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
@@ -111,9 +110,9 @@ export const Content = styled(Menubar.Content)`
 `
 
 export const BaseItem = styled(Menubar.Item)`
-  /* background-color: ${(props) => props.theme.inputBackground}; */
-  background-color: ${(props) => props.theme.backgroundLight};
-  color: ${(props) => props.theme.primary};
+  /* background-color: {(props) => props.theme.inputBackground}; */
+  background-color: #00FF00;
+  color: #00FF00;
   font-size: 1.125rem;
   font-weight: medium;
   text-transform: uppercase;
@@ -126,15 +125,15 @@ export const BaseItem = styled(Menubar.Item)`
   cursor: pointer;
 
   > a {
-    color: ${(props) => props.theme.primary};
+    color: #00FF00;
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.inputBackground};
+    background-color: #00FF00;
+    color: #00FF00;
 
     > a {
-      color: ${(props) => props.theme.white};
+      color: white;
     }
   }
 `
@@ -150,9 +149,9 @@ export const ItemBottom = styled(BaseItem)`
   padding: 0px;
 
   button {
-    background-color: ${(props) => props.theme.backgroundLight};
-    /* background-color: ${(props) => props.theme.inputBackground}; */
-    color: ${(props) => props.theme.primary};
+    background-color: #00FF00;
+    /* background-color: {(props) => props.theme.inputBackground}; */
+    color: #00FF00;
     font-size: 1.125rem;
     text-transform: uppercase;
     border: 0;
@@ -166,8 +165,8 @@ export const ItemBottom = styled(BaseItem)`
     padding-bottom: 0.5rem;
 
     &:hover {
-      background-color: ${(props) => props.theme.primary};
-      color: ${(props) => props.theme.white};
+      background-color: #00FF00;
+      color: #00FF00;
     }
   }
 `
@@ -181,11 +180,11 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
 
   a {
     text-transform: uppercase;
-    color: ${(props) =>
+    color: {(props) =>
       props.isActive ? props.theme.primary : props.theme.textHighlight};
     transition: 0.5s;
     &:hover {
-      color: ${(props) =>
+      color: {(props) =>
         props.isActive
           ? lighten(0.2, props.theme.primary)
           : lighten(0.2, props.theme.textHighlight)};
@@ -201,7 +200,7 @@ export const MobileNavLinkContainer = styled.li`
   }
 
   a {
-    color: ${(props) => props.theme.primary};
+    color: {(props) => props.theme.primary};
     text-transform: uppercase;
     text-align: center;
     transition: 0.5s;

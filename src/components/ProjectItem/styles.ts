@@ -16,7 +16,7 @@ export const Container = styled.div<ContainerProps>`
     align-items: flex-end;
     justify-content: flex-start;
     border-radius: 0.5rem;
-    border: 1px solid ${({ theme }) => theme.border};
+    border: 1px solid {({ theme }) => theme.border};
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
@@ -26,7 +26,7 @@ export const Container = styled.div<ContainerProps>`
     }
 
     &:hover {
-      border-color: ${({ theme }) => theme.primary};
+      border-color: {({ theme }) => theme.primary};
       > div.overlay {
         opacity: 0.5;
       }
@@ -41,11 +41,11 @@ export const Container = styled.div<ContainerProps>`
     > section {
       z-index: 2;
       h1 {
-        color: ${({ theme }) => theme.primary};
+        color: {({ theme }) => theme.primary};
         font-size: 1.5rem;
       }
       h2 {
-        color: ${({ theme }) => theme.secondary};
+        color: {({ theme }) => theme.secondary};
         font-weight: 300;
         font-size: 1rem;
       }
@@ -56,7 +56,7 @@ export const Container = styled.div<ContainerProps>`
       bottom: 0;
       width: 100%;
       height: 100%;
-      background: ${({ theme }) => theme.gradient};
+      background: {({ theme }) => theme.gradient};
       opacity: 0.7;
       transition: 0.5s;
     }

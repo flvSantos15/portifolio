@@ -17,11 +17,11 @@ export const Container = styled.div<ContainerProps>`
   section {
     z-index: 2;
     h1 {
-      color: ${({ theme }) => theme.primary};
+      color: {({ theme }) => theme.primary};
       font-size: 3rem;
     }
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: {({ theme }) => theme.secondary};
       font-weight: 300;
       font-size: 2rem;
     }
@@ -32,7 +32,7 @@ export const Container = styled.div<ContainerProps>`
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) => theme.gradient};
+    background: {({ theme }) => theme.gradient};
     opacity: 0.7;
     transition: 0.5s;
   }

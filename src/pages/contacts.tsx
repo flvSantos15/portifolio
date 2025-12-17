@@ -1,18 +1,8 @@
 import Head from "next/head";
-import { useEffect } from "react";
 
-import Aos from "aos";
-
-// import { Footer } from '../components/Footer';
 import { ContactList } from "../components/Contacts";
 
-import "aos/dist/aos.css";
-
 export default function Contacts() {
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
-
   return (
     <div className="flex flex-col items-center w-full h-full bg-gray-800 pb-16">
       <Head>
@@ -31,7 +21,7 @@ export default function Contacts() {
         />
       </Head>
 
-      <main className="container">
+      <main className="w-full my-0 mx-auto max-w-340 py-0 px-4">
         <ContactList />
       </main>
     </div>

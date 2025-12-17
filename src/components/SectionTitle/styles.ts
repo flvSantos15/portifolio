@@ -7,13 +7,13 @@ export const Container = styled.div`
   align-items: flex-start;
   gap: 0.5rem;
   h1 {
-    /* color: ${({ theme }) => theme.primary}; */
-    color: ${({ theme }) => theme.inputBackground};
+    /* color: {({ theme }) => theme.primary}; */
+    color: {({ theme }) => theme.inputBackground};
     font-size: 4.5rem;
   }
   h2 {
-    /* color: ${({ theme }) => theme.secondary}; */
-    color: ${({ theme }) => theme.inputBackgroundLight};
+    /* color: {({ theme }) => theme.secondary}; */
+    color: {({ theme }) => theme.inputBackgroundLight};
     font-weight: 300;
     font-size: 3.5rem;
   }

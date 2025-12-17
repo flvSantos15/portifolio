@@ -21,6 +21,9 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 import { KnowledgeItem } from "./KnowledgeItem";
 
+// TODO: remover os icones e deixar apenas o nome
+// TODO: separa entre hard e soft skills
+
 export function Knowledges() {
   return (
     <div className="w-full mt-12">

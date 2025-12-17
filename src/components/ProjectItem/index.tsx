@@ -17,7 +17,7 @@ export function ProjectItem({
   description,
 }: ProjectItemProps) {
   return (
-    <div className="w-[420px] mx-auto bg-background rounded-lg shadow-md p-4">
+    <div className="w-105 mx-auto bg-background rounded-lg shadow-md p-4">
       <h2 className="text-2xl font-bold mb-2 text-white">{title}</h2>
 
       <Link href={link} className="text-xl font-bold mb-2 text-textLight">

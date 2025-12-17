@@ -33,7 +33,7 @@ export const KnowledgeContainer = styled.div`
   align-items: center;
   justify-content: center;
   p {
-    color: ${({ theme }) => theme.primary};
+    color: {(props) => props.theme.primary};
     font-weight: 300;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -41,12 +41,12 @@ export const KnowledgeContainer = styled.div`
   svg {
     width: 6.5rem;
     height: 6.5rem;
-    color: ${({ theme }) => theme.secondary};
+    color: {({ theme }) => theme.secondary};
     transition: 0.3s;
   }
   &:hover {
     svg {
-      color: ${({ theme }) => theme.primary};
+      color: {({ theme }) => theme.primary};
       transform: scale(0.95);
     }
   }

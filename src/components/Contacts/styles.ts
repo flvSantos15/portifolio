@@ -11,7 +11,7 @@ export const Container = styled.div`
   h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: ${(props) => props.theme.primary};
+    color: #00FF00;
   }
 
   > div {
@@ -49,26 +49,26 @@ export const ContactItemContainer = styled.button`
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  background-color: ${(props) => props.theme.primary};
+  background-color: #00FF00;
   border-radius: 8px;
   cursor: pointer;
   border: 0;
 
   h2 {
-    color: ${(props) => props.theme.textHighlight};
+    color: #00FF00;
   }
 
   svg {
-    color: ${(props) => props.theme.textHighlight};
+    color: #00FF00;
   }
 
   &:hover {
     h2 {
-      color: ${(props) => props.theme.background};
+      color: #00FF00;
     }
 
     svg {
-      color: ${(props) => props.theme.background};
+      color: #00FF00;
     }
   }
 

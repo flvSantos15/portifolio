@@ -1,20 +1,30 @@
 interface ExperienciaProps {
   data: {
-    year: string;
+    year: {
+      initial: string;
+      final: string;
+    };
     title: string;
     description: string;
+    company: string;
+    tags: string[];
   };
 }
 
 export function ExperienciaItem({ data }: ExperienciaProps) {
   return (
-    <div data-aos="fade-up">
-      <div className="flex flex-col items-start justify-start w-full lg:max-w-80 rounded-lg transition bg-background p-[1.75rem] pt-[2.5rem]">
-        <h1 className="text-inputBackground text-3xl mt-5">{data.year}</h1>
-        <h3 className="text-inputBackgroundLight text-xl font-light mt-4">
+    <div className="border-b pb-4">
+      <div className="flex flex-col items-start justify-start w-full bg-background">
+        <h1 className="text-2xl font-bold">
           {data.title}
-        </h3>
-        <p className="text-textLight text-base font-light">
+        </h1>
+        <p className="text-sm font-medium">{data.company}</p>
+
+        <h4 className="text-inputBackground font-normal text-sm">
+          {data.year.initial} - {data.year.final}
+        </h4>
+
+        <p className="text-base font-light">
           {data.description.split("\n").map((line) => (
             <span key={line}>
               {line}
@@ -22,6 +32,15 @@ export function ExperienciaItem({ data }: ExperienciaProps) {
             </span>
           ))}
         </p>
+
+        <div className="flex gap-2">
+          {data.tags.map((tag) => (
+            <span key={tag} className="bg-white text-black rounded-sm p-0.5">
+              {tag}
+              <br />
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
