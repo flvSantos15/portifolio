@@ -3,9 +3,9 @@ import Link from "next/link";
 
 interface ProjectItemProps {
   title: string;
-  description?: string;
+  description: string;
   imgUrl: string;
-  slug?: string;
+  slug: string;
   link: string;
 }
 
@@ -17,25 +17,19 @@ export function ProjectItem({
   description,
 }: ProjectItemProps) {
   return (
-    <div className="w-105 mx-auto bg-background rounded-lg shadow-md p-4">
-      <h2 className="text-2xl font-bold mb-2 text-white">{title}</h2>
+    <div className="w-105 mx-auto shadow-md flex flex-col items-center bg-[#010d23] p-2 rounded-lg">
+      <div className="w-full max-h-76">
+        <Image src={imgUrl} loading="lazy" alt={title} width={200} height={200} className="w-full h-52 object-cover rounded-t-lg" />
+      </div>
 
-      <Link href={link} className="text-xl font-bold mb-2 text-textLight">
-        Repo: {slug}
+      <div className="flex flex-col gap-2 w-full pt-4 h-full text-white">
+        <h1 className="text-2xl font-bold">{title}</h1>
+        <span className="text-lg">{description}</span>
+      </div>
+
+      <Link href={link} className="text-sm font-bold mb-2 text-white">
+        repository: {slug}
       </Link>
-
-      <p className="text-textLight">{description}</p>
-
-      {imgUrl && (
-        <Image
-          src={imgUrl}
-          alt={title}
-          width={400}
-          height={400}
-          loading="lazy"
-          className="w-full h-48 object-cover mt-4"
-        />
-      )}
     </div>
   );
 }

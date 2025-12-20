@@ -19,6 +19,8 @@ interface ProjectProps {
   projects: IProject[];
 }
 
+// Adicionar os links da aplicação real.
+
 export default function Projects({ projects }: ProjectProps) {
   const [{ data }] = useProjectsQuery();
 
@@ -40,7 +42,9 @@ export default function Projects({ projects }: ProjectProps) {
         />
       </Head>
 
-      <main className="grid grid-cols-1 lg:grid-cols-3 w-full my-8 gap-2">
+      <h2 className="text-4xl font-bold text-white mb-4 text-left w-full">Projects</h2>
+
+      <main className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-full my-8 gap-2">
         {data?.projects.map((project) => {
           return (
             <ProjectItem
