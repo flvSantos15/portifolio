@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectItemProps {
   title: string;
@@ -24,11 +25,12 @@ export function ProjectItem({
 
       <div className="flex flex-col gap-2 w-full pt-4 h-full text-white">
         <h1 className="text-2xl font-bold">{title}</h1>
-        <span className="text-lg">{description}</span>
+        <span className="text-xs">{description}</span>
       </div>
 
-      <Link href={link} className="text-sm font-bold mb-2 text-white">
-        repository: {slug}
+      <Link href={link} className="flex items-center gap-2 text-sm font-bold mb-2 text-white">
+        <FaGithub />
+        Details on repository: {slug}
       </Link>
     </div>
   );
